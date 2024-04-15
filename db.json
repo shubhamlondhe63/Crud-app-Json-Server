@@ -1,0 +1,20 @@
+{
+  "persons": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "dob": "1990-05-15",
+      "avatar": "https://via.placeholder.com/150",
+      "country": "USA"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "dob": "1985-10-25",
+      "avatar": "https://via.placeholder.com/150",
+      "country": "Canada"
+    }
+  ]
+}
