@@ -1,26 +1,18 @@
 {
   "persons": [
     {
-      "name": "Jane Smith",
-      "email": "jane.smith@example.com",
-      "dob": "1985-10-25",
-      "avatar": "https://via.placeholder.com/150",
-      "country": "heeeeeeeeee",
-      "id": "2"
-    },
-    {
-      "id": "3056",
-      "name": "Shubham Londhe",
-      "email": "shubhamlondhe63@gmail.com",
-      "dob": "2011-02-10",
-      "avatar": "https://via.placeholder.com/150",
-      "country": "India"
-    },
-    {
       "id": "3ee3",
       "name": "Shubham swami",
       "email": "shubhamswami@gmail.com",
       "dob": "2008-01-30",
+      "avatar": "https://via.placeholder.com/150",
+      "country": "India"
+    },
+    {
+      "id": "abf1",
+      "name": "Shubham swami",
+      "email": "shubhamswami@gmail.com",
+      "dob": "2009-12-28",
       "avatar": "https://via.placeholder.com/150",
       "country": "India"
     }
