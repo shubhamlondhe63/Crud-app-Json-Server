@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../Service/shared-service.service';
 import { Person } from '../model/person.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-person-list',
@@ -10,7 +11,7 @@ import { Person } from '../model/person.model';
 export class PersonListComponent implements OnInit {
   persons: Person[] = [];
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router: Router) {}
 
   ngOnInit() {
     this.fetchPersons();
@@ -20,5 +21,9 @@ export class PersonListComponent implements OnInit {
     this.apiService.getPersons().subscribe((data: Person[]) => {
       this.persons = data;
     });
+  }
+
+  editPerson(person: Person): void {
+    this.router.navigate(['/edit-person', person.id]); // Navigate to edit-person route with person ID
   }
 }

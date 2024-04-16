@@ -7,6 +7,7 @@ import { Person } from '../model/person.model';
   providedIn: 'root'
 })
 export class ApiService {
+  
   private apiUrl = 'http://localhost:3000/persons';
 
   constructor(private http: HttpClient) {}
@@ -17,6 +18,11 @@ export class ApiService {
 
   addPerson(person: Person): Observable<Person> {
     return this.http.post<Person>(this.apiUrl, person);
+  }
+
+  getPersonById(id: number): Observable<Person> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Person>(url);
   }
 
   updatePerson(person: Person): Observable<Person> {
