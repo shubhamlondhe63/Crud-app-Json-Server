@@ -1,14 +1,6 @@
 {
   "persons": [
     {
-      "id": "3ee3",
-      "name": "Shubham swami",
-      "email": "shubhamswami@gmail.com",
-      "dob": "2008-01-30",
-      "avatar": "https://via.placeholder.com/150",
-      "country": "India"
-    },
-    {
       "id": "abf1",
       "name": "Shubham swami",
       "email": "shubhamswami@gmail.com",

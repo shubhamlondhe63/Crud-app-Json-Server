@@ -40,3 +40,39 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Node.js dependencies
+/node_modules
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+
+# Log files
+/logs
+*.log
+
+# Environment configuration
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
+
+# IDE/editor specific files
+.idea
+.vscode
+*.iml
+
+# Dependency lock file
+package-lock.json
+
+# Angular CLI configuration file
+.angular-cli.json
+
+# TypeScript configuration file
+tsconfig.json
+
+# End-to-end testing configuration
+e2e/protractor.conf.js
