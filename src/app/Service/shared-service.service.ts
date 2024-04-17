@@ -19,7 +19,7 @@ export class ApiService {
   }
 
   addPerson(person: Person): Observable<Person> {
-    return this.http.post<Person>(this.apiUrl, person);
+    return this.http.post<Person>('https://json-sever-live.onrender.com/persons', person);
   }
 
   getPersonById(id: number): Observable<Person> {
