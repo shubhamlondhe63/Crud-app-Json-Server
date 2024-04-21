@@ -10,6 +10,8 @@ import { ApiService } from '../Service/shared-service.service';
 export class CardViewComponent {
   @Input() person?: Person;
   @Output() editClicked: EventEmitter<Person> = new EventEmitter<Person>();
+  @Output() deleteClicked: EventEmitter<number> = new EventEmitter<number>();
+
   constructor(private apiService: ApiService) {}
 
 
@@ -17,18 +19,9 @@ export class CardViewComponent {
     this.editClicked.emit(this.person);
   }
 
-  onDeletePerson(personId: number): void {
-    if (confirm('Are you sure you want to delete this person?')) {
-      this.apiService.deletePerson(personId).subscribe(
-        () => {
-          console.log('Person deleted successfully');
-          // Optionally, you can emit an event to notify the parent component about the deletion
-        },
-        (error: any) => {
-          console.error('Error deleting person:', error);
-        }
-      );
-    }
+  deletePerson(personId: number): void {
+    this.deleteClicked.emit(personId); // Emit event with deleted person's ID
   }
+
   persons: Person[] = [];
 }

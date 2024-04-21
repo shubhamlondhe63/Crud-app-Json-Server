@@ -22,7 +22,8 @@ export class PersonFormComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       dob: ['', Validators.required],
-      avatar: ['https://via.placeholder.com/150'],
+      // avatar: ['https://via.placeholder.com/150'],
+      avatar: [''], // Initialize avatar field
       country: ['', Validators.required]
     });
   }
@@ -43,6 +44,13 @@ export class PersonFormComponent implements OnInit {
         );
       }
     });
+  }
+
+  onFileSelected(event: any) {
+    if (event.target.files && event.target.files.length) {
+      const file = event.target.files[0];
+      this.personForm.get('avatar')?.setValue(file);
+    }
   }
 
   setFormValues(person: Person): void {

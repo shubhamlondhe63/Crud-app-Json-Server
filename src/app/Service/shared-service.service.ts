@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { Person } from '../model/person.model';
 import { environment } from '../environments/environment';
 
@@ -11,6 +11,7 @@ export class ApiService {
   
   // private apiUrl = 'http://localhost:3000/persons';
   private apiUrl = environment.apiUrl;
+  personDeleted: Subject<number> = new Subject<number>();
 
   constructor(private http: HttpClient) {}
 

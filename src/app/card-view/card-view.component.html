@@ -5,6 +5,6 @@
     <p class="card-text">Email: {{ person.email }}</p>
     <p class="card-text">Country: {{ person.country }}</p>
     <p class="card-text">Age: {{ person.dob | age }}</p>
-    <button class="btn btn-danger" (click)="onDeletePerson(person.id)">Delete</button>
+    <button class="btn btn-danger" (click)="deletePerson(person.id)">Delete</button>
   </div>
 </div>
